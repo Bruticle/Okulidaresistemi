@@ -25,31 +25,15 @@ namespace Okulidaresistemi
             ekle.OgrenciId = int.Parse(txtOgrenciDersOgrenciId.Text);
             okul.OgrenciDers.Add(ekle);
             okul.SaveChanges();
-            dataGridView4.DataSource = okul.OgrenciDers.ToList();
+            MessageBox.Show("Kayıt Eklendi.");
         }
         okulidareEntities okul = new okulidareEntities();
         private void Form5_Load(object sender, EventArgs e)
         {
-            dataGridView4.DataSource = okul.OgrenciDers.ToList();
+            
         }
 
-        private void btnOgrenciDersSil_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(dataGridView4.CurrentRow.Cells[0].Value.ToString());
-            OgrenciDers sil = okul.OgrenciDers.Where(x => x.Id == id).FirstOrDefault();
-            okul.OgrenciDers.Remove(sil);
-            okul.SaveChanges();
-            dataGridView4.DataSource = okul.OgrenciDers.ToList();
-        }
-
-        private void btnOgrenciDersGuncelle_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(dataGridView4.CurrentRow.Cells[0].Value.ToString());
-            OgrenciDers guncelle = okul.OgrenciDers.Where(x => x.Id == id).FirstOrDefault();
-            guncelle.DersId = int.Parse(txtOgrenciDersDersId.Text);
-            guncelle.OgrenciId = int.Parse(txtOgrenciDersOgrenciId.Text);
-            okul.SaveChanges();
-            dataGridView4.DataSource = okul.OgrenciDers.ToList();
-        }
+ 
+        
     }
 }

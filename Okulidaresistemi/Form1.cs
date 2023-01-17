@@ -17,11 +17,7 @@ namespace Okulidaresistemi
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 fr2 = new Form2();
-            fr2.ShowDialog();
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -39,6 +35,59 @@ namespace Okulidaresistemi
         {
             Form5 fr5 = new Form5();
             fr5.ShowDialog();
+        }
+
+        private void girişToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 fr4 = new Form4();
+            fr4.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void girişToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form3 fr3 = new Form3();
+            fr3.ShowDialog();
+        }
+
+        private void girişToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form2 fr2 = new Form2();
+            fr2.ShowDialog();
+        }
+
+        private void grişToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 fr5 = new Form5();
+            fr5.ShowDialog();
+        }
+
+        private void listeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 fr6 = new Form6();
+            fr6.ShowDialog();
+        }
+
+        private void listeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form7 fr7 = new Form7();
+            fr7.ShowDialog();
+        }
+
+        private void listeToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form8 fr8 = new Form8();
+            fr8.ShowDialog();
+        }
+
+        private void listeToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form9 fr9 = new Form9();
+            fr9.ShowDialog();
         }
     }
 }

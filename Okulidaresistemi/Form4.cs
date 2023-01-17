@@ -20,7 +20,7 @@ namespace Okulidaresistemi
         okulidareEntities okul = new okulidareEntities();
         private void Form4_Load(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = okul.Ders.ToList();
+            
         }
 
         private void btnDersEkle_Click(object sender, EventArgs e)
@@ -31,27 +31,7 @@ namespace Okulidaresistemi
             ekle.OkulYonetimId = int.Parse(txtDersOkulYonetimId.Text);
             okul.Ders.Add(ekle);
             okul.SaveChanges();
-            dataGridView3.DataSource = okul.Ders.ToList();
-        }
-
-        private void btnDersSil_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(dataGridView3.CurrentRow.Cells[0].Value.ToString());
-            Ders sil = okul.Ders.Where(x => x.Id == id).FirstOrDefault();
-            okul.Ders.Remove(sil);
-            okul.SaveChanges();
-            dataGridView3.DataSource = okul.Ders.ToList();
-        }
-
-        private void btnDersGuncelle_Click(object sender, EventArgs e)
-        {
-            int id = int.Parse(dataGridView3.CurrentRow.Cells[0].Value.ToString());
-            Ders guncelle = okul.Ders.Where(x => x.Id == id).FirstOrDefault();
-            guncelle.Ad = txtDersAd.Text;
-            guncelle.Kredisi = int.Parse(txtDersKredi.Text);
-            guncelle.OkulYonetimId = int.Parse(txtDersOkulYonetimId.Text);
-            okul.SaveChanges();
-            dataGridView3.DataSource = okul.Ders.ToList();
+            MessageBox.Show("Kayıt Eklendi.");
         }
     }
 }
